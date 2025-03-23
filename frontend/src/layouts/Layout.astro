@@ -1,16 +1,29 @@
 ---
+import Header from "../components/Header.astro";
 import "../styles/global.css";
 ---
 
 <!doctype html>
-<html lang="en">
+<html lang="de">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width" />
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-    <title>Astro Basics</title>
-  </head>
-  <body>
-    <slot />
-  </body>
+    <title>Astro Basics</title></head
+  >
 </html>
+<body class="streifen">
+  <Header />
+
+  <slot />
+</body>
+
+<style>
+  .streifen {
+    background-image: url("images/Streifen.svg");
+    background-color: #4dc2d3;
+    background-repeat: no-repeat;
+    background-position-x: center;
+    background-position-y: top;
+  }
+</style>

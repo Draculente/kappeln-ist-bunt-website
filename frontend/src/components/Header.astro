@@ -1,11 +1,53 @@
-<div class="flex flex-row justify-center items-center">
-  <div class="flex flex-row justify-between items-center">
-    <img src="images/logo.svg" alt="Das Kappeln ist bunt Logo" />
-
-    <nav
-      class="flex flex-row justify-evenly items-center"
-      aria-label="Hauptmenü"
+<div class="flex flex-row justify-center items-center py-5 fixed w-full z-10">
+  <div
+    class="flex flex-row justify-between items-center rounded-full bg-bg-header w-5xl h-14 px-5 mx-4"
+  >
+    <a href="/"
+      ><img
+        class="w-[150px] translate-y-3"
+        src="images/logo.svg"
+        alt="Das Kappeln ist bunt Logo"
+      /></a
     >
+
+    <div class="flex-col justify-center items-start hidden lg:flex">
+      <p class="font-bold text-text-dark text-xs uppercase -mb-1.5">
+        Nächste Veranstaltung
+      </p>
+      <p class="text-white font-semibold">
+        <span>Kappeln ist bunt und singt:</span> Sa, 20.10.2024
+      </p>
+    </div>
+
+    <nav class="font-cubano">
+      <h2 class="sr-only">Hauptmenü</h2>
+      <ul class="flex flex-row justify-evenly items-center gap-2.5 text-white">
+        <li>
+          <a href="/" class="font-cubano active-page" aria-current="page"
+            >Start</a
+          >
+        </li>
+        <li><a href="/blog">Blog</a></li>
+        <li><a href="/about-us">Über uns</a></li>
+      </ul>
     </nav>
   </div>
 </div>
+
+<style>
+  /* .active-page::after {
+    --radius: 10px;
+    content: "";
+    width: var(--radius);
+    height: var(--radius);
+    border-radius: 50%;
+    display: block;
+    background-color: yellow;
+    transform: translateX(100%);
+  } */
+  .active-page {
+    text-decoration: underline yellow 3px;
+    text-underline-offset: 3px;
+    /* text-decoration-style: wavy; */
+  }
+</style>
